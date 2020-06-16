@@ -4,13 +4,14 @@
 	/* background-size: cover;
 	background-attachment: fixed; */
 	color: white;
+	position: relative;
 }
 
 .img-cover > * {
 	z-index: 2;
 }
 h1 {
-	font-family: 'Fira Code', monospace;
+	font-family: "Fira Code", monospace;
 }
 
 .page {
@@ -20,8 +21,13 @@ h1 {
 	padding: 80px 10px;
 }
 
+/* .page-2::-webkit-scrollbar {
+	display: none;
+  } */
+
 .page-2 {
 	background-color: black;
+	overflow-y: hidden;
 	/* background: rgb(0, 0, 0);
 	background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(11, 20, 19, 1) 55%, rgba(22, 40, 39, 1) 100%);
 	color: white; */
@@ -59,7 +65,7 @@ a:hover {
 }
 
 .navbar {
-	font-family: 'Comfortaa', cursive;
+	font-family: "Comfortaa", cursive;
 	transition: background-color 0.5s linear;
 }
 
@@ -83,7 +89,7 @@ form {
 .contact-input {
 	/* color: white; */
 	color: orange;
-	font-family: 'Fira Code', monospace;
+	font-family: "Fira Code", monospace;
 	font-weight: 500;
 	font-size: 18px;
 	border-radius: 5px;
@@ -108,8 +114,8 @@ textarea {
 	resize: vertical;
 }
 
-[type='submit'] {
-	font-family: 'Fira Code', monospace;
+[type="submit"] {
+	font-family: "Fira Code", monospace;
 	width: 100%;
 	background: darkcyan;
 	border-radius: 5px;
@@ -124,7 +130,7 @@ textarea {
 	margin-top: -4px;
 	font-weight: 700;
 }
-[type='submit']:hover {
+[type="submit"]:hover {
 	background: brown;
 }
 
@@ -228,7 +234,7 @@ textarea {
 
 .building-img {
 	position: absolute;
-	bottom: -17px;
+	bottom: 0;
 	left: 0;
 	z-index: 1;
 }
