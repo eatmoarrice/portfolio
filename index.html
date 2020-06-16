@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Fira+Code:wght@500&display=swap" rel="stylesheet" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -32,37 +32,78 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-page="home">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">About Me</a>
+						<a class="nav-link" href="#" data-page="about">About Me</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">My Works</a>
+						<a class="nav-link" href="#" data-page="portfolio">My Works</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
+						<a class="nav-link" href="#" data-page="contact">Contact</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-		<div class="img-cover page text-center d-flex align-items-center justify-content-center flex-column page-1">
-			<h1 class="m-4">[ Hey there! <br />I'm a web developer! ]</h1>
-			<div class="icons">
+		<div class="img-cover page text-center d-flex align-items-center justify-content-center flex-column page-1" id="home">
+			<div class="galaxy"></div>
+			<div class="buildings">
+				<img class="img-fluid building-img" src="img/buildings.png" alt="buildings" />
+			</div>
+			<h1 data-aos="zoom-in" data-aos-duration="1000" class="m-4">
+				<div class="d-flex">
+					<span class="code jump1">[ </span><span class="code-text" style="color: khaki;"> Hey there! I'm <span class="blink">Vinh</span>! </span><span class="code jump2"> ]</span>
+				</div>
+			</h1>
+			<div class="icons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
 				<a href="https://github.com/eatmoarrice/"><i class="fab fa-2x fa-github"></i></a>
-				<a href="https://github.com/eatmoarrice/"><i class="fas fa-2x fa-envelope"></i></a>
+				<a href="#" data-page="contact"><i class="fas fa-2x fa-envelope"></i></a>
 			</div>
 		</div>
-		<div class="page page-2 text-center d-flex align-items-center flex-column">
+		<div class="page page-2 text-center d-flex align-items-center flex-column" id="about">
 			<h1><span class="code">[</span><span class="code-text"> About Me </span><span class="code">]</span></h1>
-			<!-- <div>Skills & Interest</div>
-			<div>Languages:</div>
-			<div>Vietnamese</div>
-			<div>English</div>
-			<div>German</div> -->
+			<div class="container mt-5">
+				<div class="row">
+					<div class="col-md-5 text-md-right skill" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+						Languages:
+					</div>
+					<div class="col-md-1 border-right d-none d-md-block" data-aos="fade-up" data-aos-anchor-placement="center-bottom"></div>
+					<div class="col-md-6 text-md-left" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+						<div>Vietnamese</div>
+						<div>English</div>
+						<div>German</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 text-md-right skill" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+						Skills:
+					</div>
+					<div class="col-md-1 border-right d-none d-md-block" data-aos="fade-up" data-aos-anchor-placement="center-bottom"></div>
+					<div class="col-md-6 text-md-left" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+						<div>HTML/CSS/JS</div>
+						<div>ReactJS</div>
+						<div>Python</div>
+						<div>Java</div>
+						<div>Photoshop</div>
+						<div>UI Design</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 text-md-right skill" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+						Hobbies:
+					</div>
+					<div class="col-md-1 border-right d-none d-md-block" data-aos="fade-up" data-aos-anchor-placement="center-bottom"></div>
+					<div class="col-md-6 text-md-left" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+						<div>Playing/Making Music</div>
+						<div>Reading</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="d-flex justify-content-center align-items-center flex-column">
-				<div class="head mt-4 head1" data-aos="fade-down" data-aos-anchor-placement="center-bottom">
+				<!-- <div class="head mt-4 head1" data-aos="fade-down" data-aos-anchor-placement="center-bottom">
 					Testing
 				</div>
 				<div class="row row1">
@@ -72,91 +113,93 @@
 					<div class="body col-6" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
 						Right
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
-		<div class="page text-center page-3 align-items-center flex-column d-flex">
+		<div class="page text-center page-3 d-flex flex-column" id="portfolio">
 			<h1><span class="code">[</span><span class="code-text"> My Works </span><span class="code">]</span></h1>
-			<div class="container d-flex justify-content-between align-items-center flex-wrap">
-				<div class="project-card z1">
-					<!-- <div class="z1"> -->
-					<h4>WOTV Material Planner</h4>
-					<h6 style="font-size: 11px;">Final Fantasy Brave Exvius War of the Visions tool</h6>
-					<div class="d-flex justify-content-center">
-						<div class="badge badge-warning m-2 p-2">Javascript</div>
-						<div class="badge badge-warning m-2 p-2">CSS</div>
-					</div>
-
-					<div class="d-flex justify-content-center align-items-center flex-column">
-						<div class="img-container"><img class="img-hover" src="/img/Screenshot.png" width="300px" alt="pikoosakd" /></div>
-						<p class="text-left">
-							Features: <br />
-							- Including every unit<br />
-							- Calculating the neccessary materials to reach a certain job level<br />
-							- Finding the best locations to find the above materials
-						</p>
-						<div class="d-flex justify-content-center">
-							<a class="live-button m-2 p-2" href="https://wotv-guide.com/">Live</a>
-							<a class="code-button m-2 p-2" href="https://github.com/eatmoarrice/eatmoarrice.github.io">Code</a>
-						</div>
-					</div>
-					<!-- </div> -->
-				</div>
-				<div class="project-card">
-					<div class="z1">
-						<h3>PokeDex</h3>
-						<h6>A working Pokemon Database</h6>
-						<div class="d-flex justify-content-center">
-							<div class="badge badge-warning m-2 p-2">Javascript</div>
-							<div class="badge badge-warning m-2 p-2">ReactJS</div>
-							<div class="badge badge-warning m-2 p-2">CSS</div>
-						</div>
-
-						<div class="d-flex justify-content-center align-items-center flex-column">
-							<div class="img-container"><img class="img-hover" src="/img/Screenshot.png" width="300px" alt="pikoosakd" /></div>
-							<p class="text-left">
-								Features: <br />
-								- Including every unit<br />
-								- Calculating the neccessary materials to reach a certain job level<br />
-								- Finding the best locations to find the above materials
-							</p>
+			<div class="align-items-center flex-column justify-content-center d-flex" style="flex-grow: 1;">
+				<div class="container row">
+					<div class="card-container col-xl-4 col-md-6" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+						<div class="project-card">
+							<h4 class="project-title">WOTV Material Planner</h4>
+							<h6 style="font-size: 11px;">Final Fantasy Brave Exvius War of the Visions tool</h6>
 							<div class="d-flex justify-content-center">
-								<a class="live-button m-2 p-2" href="https://wotv-guide.com/">Live</a>
-								<a class="code-button m-2 p-2" href="https://github.com/eatmoarrice/eatmoarrice.github.io">Code</a>
+								<div class="badge badge-warning m-2 p-2">Javascript</div>
+								<div class="badge badge-warning m-2 p-2">CSS</div>
+							</div>
+
+							<div class="d-flex justify-content-center align-items-center flex-column">
+								<div class="img-container"><img class="img-hover" src="/img/wotv.jpg" width="300px" alt="WOTV Screenshot" /></div>
+								<div class="d-flex justify-content-center">
+									<a class="live-button m-2 p-2" href="https://wotv-guide.com/">Live</a>
+									<a class="code-button m-2 p-2" href="https://github.com/eatmoarrice/eatmoarrice.github.io">Code</a>
+								</div>
+								<p class="text-left">
+									Features: <br />
+									- Including every unit<br />
+									- Calculating the neccessary materials to reach a certain job level<br />
+									- Finding the best locations to find the above materials
+								</p>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="project-card">
-					<div class="z1">
-						<h3>MooVeeDB</h3>
-						<h6>IMDB-like page</h6>
-						<div class="d-flex justify-content-center">
-							<div class="badge badge-warning m-2 p-2">Javascript</div>
-							<div class="badge badge-warning m-2 p-2">ReactJS</div>
-							<div class="badge badge-warning m-2 p-2">CSS</div>
-						</div>
-
-						<div class="d-flex justify-content-center align-items-center flex-column">
-							<div class="img-container"><img class="img-hover" src="/img/Screenshot.png" width="300px" alt="pikoosakd" /></div>
-							<p class="text-left">
-								Features: <br />
-								- Including every unit<br />
-								- Calculating the neccessary materials to reach a certain job level<br />
-								- Finding the best locations to find the above materials
-							</p>
+					<div class="card-container col-xl-4 col-md-6" data-aos="fade-down" data-aos-anchor-placement="center-bottom">
+						<div class="project-card">
+							<h3 class="project-title">PokeDex</h3>
+							<h6>A Pokemon Database</h6>
 							<div class="d-flex justify-content-center">
-								<a class="live-button m-2 p-2" href="https://wotv-guide.com/">Live</a>
-								<a class="code-button m-2 p-2" href="https://github.com/eatmoarrice/eatmoarrice.github.io">Code</a>
+								<div class="badge badge-warning m-2 p-2">Javascript</div>
+								<!-- <div class="badge badge-warning m-2 p-2">ReactJS</div> -->
+								<div class="badge badge-warning m-2 p-2">CSS</div>
+							</div>
+
+							<div class="d-flex justify-content-center align-items-center flex-column">
+								<div class="img-container"><img class="img-hover" src="/img/pokemon.jpg" width="300px" alt="PokeDex Screenshot" /></div>
+								<div class="d-flex justify-content-center">
+									<a class="live-button m-2 p-2" href="https://pokedexgroup3.netlify.app/">Live</a>
+									<a class="code-button m-2 p-2" href="https://github.com/eatmoarrice/Pokedex_Group_3">Code</a>
+								</div>
+								<p class="text-left">
+									Features: <br />
+									- Including random Pokemons<br />
+									- Stylistically displayed as cards<br />
+									- Keyframe animation
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-container col-xl-4 col-md-6" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+						<div class="project-card">
+							<h3 class="project-title">MooVeeDB</h3>
+							<h6>A working movie database</h6>
+							<div class="d-flex justify-content-center">
+								<div class="badge badge-warning m-2 p-2">Javascript</div>
+								<div class="badge badge-warning m-2 p-2">ReactJS</div>
+								<div class="badge badge-warning m-2 p-2">CSS</div>
+							</div>
+
+							<div class="d-flex justify-content-center align-items-center flex-column">
+								<div class="img-container"><img class="img-hover" src="/img/mv.jpg" width="300px" alt="MooVeeDB Screenshot" /></div>
+								<div class="d-flex justify-content-center">
+									<a class="live-button m-2 p-2" href="https://mooveedb.netlify.app/">Live</a>
+									<a class="code-button m-2 p-2" href="https://github.com/eatmoarrice/mooveeDB">Code</a>
+								</div>
+								<p class="text-left">
+									Features: <br />
+									- All new movies<br />
+									- Search/filter function<br />
+									- A detail page with trailers for every movie
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="page text-center page-4">
+		<div class="page text-center page-4" id="contact">
 			<h1><span class="code">[</span><span class="code-text"> Contact Me </span><span class="code">]</span></h1>
-			<div class="d-flex justify-content-center align-items-center h-100">
+			<div class="d-flex justify-content-center align-items-center h-100" data-aos="flip-up" data-aos-anchor-placement="center-bottom" data-aos-duration="700">
 				<form>
 					<input name="name" type="text" class="contact-input" placeholder="Name" />
 					<input name="email" type="text" class="contact-input" placeholder="Email" />
@@ -165,7 +208,7 @@
 				</form>
 			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
