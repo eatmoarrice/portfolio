@@ -11,7 +11,7 @@
 	z-index: 2;
 }
 h1 {
-	font-family: "Fira Code", monospace;
+	font-family: 'Fira Code', monospace;
 }
 
 .page {
@@ -53,6 +53,8 @@ a:hover {
 }
 
 .icons {
+	position: relative;
+	z-index: 10;
 	margin-top: 40px;
 }
 .icons > * {
@@ -65,7 +67,7 @@ a:hover {
 }
 
 .navbar {
-	font-family: "Comfortaa", cursive;
+	font-family: 'Comfortaa', cursive;
 	transition: background-color 0.5s linear;
 }
 
@@ -89,7 +91,7 @@ form {
 .contact-input {
 	/* color: white; */
 	color: orange;
-	font-family: "Fira Code", monospace;
+	font-family: 'Fira Code', monospace;
 	font-weight: 500;
 	font-size: 18px;
 	border-radius: 5px;
@@ -114,8 +116,8 @@ textarea {
 	resize: vertical;
 }
 
-[type="submit"] {
-	font-family: "Fira Code", monospace;
+[type='submit'] {
+	font-family: 'Fira Code', monospace;
 	width: 100%;
 	background: darkcyan;
 	border-radius: 5px;
@@ -130,7 +132,7 @@ textarea {
 	margin-top: -4px;
 	font-weight: 700;
 }
-[type="submit"]:hover {
+[type='submit']:hover {
 	background: brown;
 }
 
@@ -228,15 +230,43 @@ textarea {
 	color: cornsilk;
 }
 
-.buildings {
+/* .buildings {
 	overflow: hidden;
-}
+} */
 
 .building-img {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 3;
+	width: 100% !important;
+	pointer-events: none;
+}
+
+.blink1-img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 4;
+	width: 100% !important;
+	-webkit-animation: twinkle_one 5s ease-in-out infinite;
+	-moz-animation: twinkle_one 5s ease-in-out infinite;
+	-o-animation: twinkle_one 5s ease-in-out infinite;
+	animation: twinkle_one 5s ease-in-out infinite;
+	pointer-events: none;
+}
+
+.blink2-img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 4;
+	width: 100% !important;
+	-webkit-animation: twinkle_one 5s ease-in-out 2s infinite;
+	-moz-animation: twinkle_one 5s ease-in-out 2s infinite;
+	-o-animation: twinkle_one 5s ease-in-out 2s infinite;
+	animation: twinkle_one 5s ease-in-out 2s infinite;
+	pointer-events: none;
 }
 
 @-webkit-keyframes twinkle_one {
